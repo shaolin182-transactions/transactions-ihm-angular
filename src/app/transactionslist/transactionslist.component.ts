@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionsService } from '../transactions.service'
-import { Transaction } from '../transaction';
+import { Transaction } from '../models/transaction';
 
 @Component({
   selector: 'app-transactionslist',
@@ -20,7 +20,12 @@ export class TransactionslistComponent implements OnInit {
   }
 
   getTransactions() : void {
-    this.transactions = this.transactionsService.getTransactions();
+    this.transactions = this.transactionsService.getTransactions()
+      .subscribe((data: Config) => this.config = {
+                         heroesUrl: data.heroesUrl,
+                         textfile:  data.textfile,
+                         date: data.date,
+                     });
   }
 
 }
