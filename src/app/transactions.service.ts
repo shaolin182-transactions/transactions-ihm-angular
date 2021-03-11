@@ -13,7 +13,7 @@ export class TransactionsService {
 
   constructor(private http: HttpClient) { }
 
-  getTransactions() : Transaction[] {
-    return this.http.get("this.configUrl");
+  getTransactions() : Observable<Transaction[]> {
+    return this.http.get<Transaction[]>("http://localhost:8084/transactions");
   }
 }

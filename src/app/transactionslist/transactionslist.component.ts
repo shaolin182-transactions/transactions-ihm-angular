@@ -20,12 +20,8 @@ export class TransactionslistComponent implements OnInit {
   }
 
   getTransactions() : void {
-    this.transactions = this.transactionsService.getTransactions()
-      .subscribe((data: Config) => this.config = {
-                         heroesUrl: data.heroesUrl,
-                         textfile:  data.textfile,
-                         date: data.date,
-                     });
+    this.transactionsService.getTransactions()
+      .subscribe(transactions => this.transactions = transactions);
   }
 
 }
