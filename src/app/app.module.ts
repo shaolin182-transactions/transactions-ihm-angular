@@ -4,24 +4,37 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { RouterModule } from '@angular/router'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TransactionslistComponent } from './transactionslist/transactionslist.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionslistComponent
+    TransactionslistComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([
+      { path: 'login', component: LoginComponent},
+      { path: '', redirectTo: 'login', pathMatch: 'full'},
+      { path: 'transactions', component: TransactionslistComponent},
+    ]),
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot({
+        resourceServer: {
+            allowedUrls: ['http://localhost:8080/transactions'],
+            sendAccessToken: true
+        }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
