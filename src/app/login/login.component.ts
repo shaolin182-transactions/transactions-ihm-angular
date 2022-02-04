@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OAuthService  } from 'angular-oauth2-oidc';
 import { filter } from 'rxjs/operators';
-import { googleAuthConfig } from '../auth.google.config'
 import { keycloakAuthConfig } from '../auth.keycloak.config'
-
 
 @Component({
   selector: 'app-login',
@@ -22,8 +20,9 @@ export class LoginComponent implements OnInit {
 
   private configureCodeFlow() {
     console.log("Configure Code Flow")
-    this.oauthService.configure(keycloakAuthConfig);
-    this.oauthService.loadDiscoveryDocumentAndTryLogin();
+//     this.oauthService.configure(keycloakAuthConfig);
+//     this.oauthService.loadDiscoveryDocumentAndTryLogin();
+    this.oauthService.events.subscribe(e => console.log(e));
     this.oauthService.initCodeFlow();
   }
 
@@ -36,7 +35,7 @@ export class LoginComponent implements OnInit {
       this.oauthService.logOut();
   }
 
-get userName(): string {
+  get userName(): string {
     const claims = this.oauthService.getIdentityClaims();
     if (!claims) return null;
     return claims['given_name'];

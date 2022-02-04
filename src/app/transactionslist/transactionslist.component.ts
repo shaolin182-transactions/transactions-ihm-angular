@@ -17,12 +17,8 @@ export class TransactionslistComponent implements OnInit {
   displayedColumns: string[] = ['id', 'date', 'description', 'cost'];
 
   constructor(
-    private transactionsService : TransactionsService,
-    private oauthService: OAuthService) {
+    private transactionsService : TransactionsService) {
 
-    this.oauthService.events
-          .pipe(filter((e) => e.type === 'token_received'))
-          .subscribe((_) => this.oauthService.loadUserProfile());
     }
 
   ngOnInit(): void {
@@ -30,25 +26,8 @@ export class TransactionslistComponent implements OnInit {
     this.getTransactions();
   }
 
-   async loginCode() {
-    // Tweak config for code flow
-//     this.oauthService.configure(googleAuthConfig);
-//     await this.oauthService.loadDiscoveryDocument();
-    sessionStorage.setItem('flow', 'code');
-
-    console.log("Entering loginCode")
-    if (!this.oauthService.hasValidIdToken() || !this.oauthService.hasValidAccessToken()) {
-      console.log("No Valid Token")
-    } else {
-      console.log('Token')
-    }
-  }
-
   getTransactions() : void {
     this.transactionsService.getTransactions()
       .subscribe(transactions => this.transactions = transactions);
   }
-
-
-
 }
