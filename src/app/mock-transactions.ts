@@ -1,0 +1,130 @@
+import { Transaction } from './models/transaction'
+
+export const TRANSACTIONS_LIST: Transaction[] = [
+    {
+        "id" : "5f2c159c7602f27ba01133e3",
+        "description" : "a fake description",
+        "date": "2021-03-02T18:13:00Z",
+        "transactions" : [
+            {
+                "category" : {
+                    "id": 17,
+                    "category" : "Autres",
+                    "label" : "Cadeaux"
+                },
+                "bankAccount" : {
+                    "id": 21,
+                    "category" : "Commun",
+                    "label" : "CMB"
+                },
+                "income" : 0,
+                "outcome": 39.95000076293945
+            },
+            {
+                "category" : {
+                    "id": 14,
+                    "category" : "Alimentaire",
+                    "label" : "Supermarché"
+                },
+                "bankAccount" : {
+                    "id": 21,
+                    "category" : "Commun",
+                    "label" : "CMB"
+                },
+                "income" : 0,
+                "outcome": 35.16999816894531
+            }
+
+        ],
+        "cost" : -7512,
+        "costAbs" : 7512
+    },
+    {
+        "id" : "2",
+        "description" : "a fake description",
+        "date": "2021-03-02T18:13:00Z",
+        "transactions" : [
+            {
+                "category" : {
+                    "id": 2,
+                    "category" : "category 2A ",
+                    "label" : "label category 2A"
+                },
+                "bankAccount" : {
+                    "id": 2,
+                    "category" : "category 2A",
+                    "label" : "label bank account 2A"
+                },
+                "income" : 2,
+                "outcome": 0
+            },
+            {
+                "category" : {
+                    "id": 2,
+                    "category" : "category 2B ",
+                    "label" : "label category 2B"
+                },
+                "bankAccount" : {
+                    "id": 2,
+                    "category" : "category 2B",
+                    "label" : "label bank account 2B"
+                },
+                "income" : 2,
+                "outcome": 0
+            }
+        ],
+        "cost" : 400,
+        "costAbs" : 400
+    },
+    {
+        "id" : "3",
+        "description" : "a fake description",
+        "date": "2021-03-02T18:13:00Z",
+        "transactions" : [
+            {
+                "category" : {
+                    "id": 3,
+                    "category" : "category 3A",
+                    "label" : "label category 3A"
+                },
+                "bankAccount" : {
+                    "id": 3,
+                    "category" : "category 3A",
+                    "label" : "label bank account 3A"
+                },
+                "income" : 2,
+                "outcome": 0
+            },
+            {
+                "category" : {
+                    "id": 3,
+                    "category" : "category 3B",
+                    "label" : "label category 3B"
+                },
+                "bankAccount" : {
+                    "id": 3,
+                    "category" : "category 3B",
+                    "label" : "label bank account 3B"
+                },
+                "income" : 4,
+                "outcome": 0
+            },
+            {
+                "category" : {
+                    "id": 3,
+                    "category" : "category 3C",
+                    "label" : "label category 3C"
+                },
+                "bankAccount" : {
+                    "id": 3,
+                    "category" : "category 3C",
+                    "label" : "label bank account 3C"
+                },
+                "income" : 3,
+                "outcome": 0
+            }
+        ],
+        "cost" : 900,
+        "costAbs" : 900
+    }
+]
