@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component'
 import { SharedModule } from './shared/shared.module'
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { CostComponent } from './transactionslist/cost/cost.component';
 
 registerLocaleData(localeFr);
 
@@ -18,7 +19,8 @@ registerLocaleData(localeFr);
   declarations: [
     AppComponent,
     TransactionslistComponent,
-    HomeComponent
+    HomeComponent,
+    CostComponent
   ],
   imports: [
     BrowserModule,
