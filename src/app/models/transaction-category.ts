@@ -3,4 +3,5 @@ export interface TransactionCategory {
   category: String;
   label:String;
   type?: String;
+  sortedLabel?: String;
 }

@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Transaction } from './models/transaction';
+import { BankAccount } from './models/bank-account';
+import { TransactionCategory } from './models/transaction-category';
 import { TransactionItem } from './models/transaction-item';
 
 @Injectable({
@@ -23,12 +25,12 @@ export class TransactionsService {
   mapTransactions(data: Transaction[]) : TransactionItem[] {
     return data.map( item => {
 
-        let bankAccount = "Multi"
-        let category = "Multi"
+        let bankAccount:BankAccount
+        let category: TransactionCategory
 
         if (item.transactions.length == 1){
-          bankAccount = item.transactions[0].bankAccount.category + " > " + item.transactions[0].bankAccount.label
-          category = item.transactions[0].category?.category + " > " + item.transactions[0].category?.label
+          bankAccount = item.transactions[0].bankAccount
+          category = item.transactions[0].category
         }
 
         return {
@@ -36,7 +38,7 @@ export class TransactionsService {
           date : item.date,
           cost: item.cost,
           description : item.description,
-          bankaccount: bankAccount,
+          bankAccount: bankAccount,
           category: category
         } as TransactionItem;
     })
