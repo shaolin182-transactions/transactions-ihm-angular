@@ -20,10 +20,25 @@ export class TransactionslistComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
+    this.dataSource.sortingDataAccessor = this.sortingDataAccessor;
   }
 
+  sortingDataAccessor: ((data: TransactionItem, sortHeaderId: string) => string | number) =
+    (data: TransactionItem, sortHeaderId: string): string | number => {
+      let value = null;
+      if (sortHeaderId.indexOf('.') !== -1) {
+        const ids = sortHeaderId.split('.');
+        if (data && data[ids[0]]){
+          value = data[ids[0]][ids[1]];
+        }
+      } else {
+        value = data[sortHeaderId];
+      }
+      return value;
+    }
 
-  displayedColumns: string[] = ['date', 'description', 'bankaccount', 'category', 'cost'];
+
+  displayedColumns: string[] = ['date', 'description', 'bankAccount.sortedLabel', 'category.sortedLabel', 'cost'];
 
   constructor(
     private transactionsService : TransactionsService) {

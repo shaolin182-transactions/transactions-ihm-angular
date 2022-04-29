@@ -20,21 +20,21 @@
     </ng-container>
 
     <!-- Category Column -->
-    <ng-container matColumnDef="category">
+    <ng-container matColumnDef="category.sortedLabel">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
-      <td mat-cell *matCellDef="let element"> {{element.category }} </td>
+      <td mat-cell *matCellDef="let element"> <app-category [category]="element.category"></app-category> </td>
     </ng-container>
 
     <!-- BankAccount Column -->
-    <ng-container matColumnDef="bankaccount">
+    <ng-container matColumnDef="bankAccount.sortedLabel">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Bank Account </th>
-      <td mat-cell *matCellDef="let element"> {{element.bankaccount }} </td>
+      <td mat-cell *matCellDef="let element"> <app-bank-account [bankAccount]="element.bankAccount"></app-bank-account> </td>
     </ng-container>
   
     <!-- Cost Column -->
     <ng-container matColumnDef="cost">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Cost </th>
-      <td mat-cell *matCellDef="let element"> {{element.cost / 100 | currency :'EUR' }} </td>
+      <td mat-cell *matCellDef="let element"> <app-cost [cost]="element.cost"></app-cost> </td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
