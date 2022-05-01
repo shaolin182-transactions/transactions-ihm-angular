@@ -8,6 +8,8 @@ import { BankAccount } from './models/bank-account';
 import { TransactionCategory } from './models/transaction-category';
 import { TransactionItem } from './models/transaction-item';
 
+import { environment } from '../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +18,7 @@ export class TransactionsService {
   constructor(private http: HttpClient) { }
 
   getTransactions() : Observable<TransactionItem[]> {
-    return this.http.get<Transaction[]>("http://localhost:8080/transactions")
+    return this.http.get<Transaction[]>(environment.transactionsUrl)
       .pipe(
         map(data => this.mapTransactions(data))
       );

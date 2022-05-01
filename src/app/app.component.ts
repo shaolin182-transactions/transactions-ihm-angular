@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { OAuthService  } from 'angular-oauth2-oidc';
-import { filter } from 'rxjs/operators';
 import { keycloakAuthConfig } from './auth.keycloak.config'
 
 @Component({
@@ -18,10 +17,6 @@ export class AppComponent {
     private configureCodeFlow() {
         this.oauthService.configure(keycloakAuthConfig);
         this.oauthService.loadDiscoveryDocumentAndTryLogin();
-//         this.oauthService.loadDiscoveryDocument();
-
-        // Optional
-//         this.oauthService.setupAutomaticSilentRefresh();
       }
 
 }

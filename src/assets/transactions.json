@@ -1,0 +1,1420 @@
+[
+    {
+        "id": "5f58d5318dbedb685ba1a29e",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 10,
+                    "category": "Revenu",
+                    "label": "Salaire",
+                    "type": "COURANTE"
+                },
+                "income": 50.35,
+                "outcome": 0.0,
+                "description": "Salaire",
+                "bankAccount": {
+                    "id": 1,
+                    "category": "Perso",
+                    "label": "ING Direct"
+                },
+                "cost": 5035,
+                "costAbs": 5035
+            }
+        ],
+        "date": 1525209517.683000000,
+        "cost": 5035,
+        "costAbs": 5035,
+        "type": "INCOME"
+    },
+    {
+        "id": "5f58d5388dbedb685ba1a29f",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 1,
+                    "category": "Maison",
+                    "label": "Loyer/Prêt",
+                    "type": "FIXE"
+                },
+                "income": 0.0,
+                "outcome": 1276.87,
+                "description": "Loyer",
+                "bankAccount": {
+                    "id": 12,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -127687,
+                "costAbs": 127687
+            }
+        ],
+        "date": 1588626997.683000000,
+        "cost": -127687,
+        "costAbs": 127687,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff77",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 64,
+                    "category": "Bébé",
+                    "label": "Accessoires",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 34.92,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -3492,
+                "costAbs": 3492
+            }
+        ],
+        "date": 1604361600.000000000,
+        "cost": -3492,
+        "costAbs": 3492,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff78",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 66,
+                    "category": "Revenu",
+                    "label": "Vir Externe",
+                    "type": null
+                },
+                "income": 1000.0,
+                "outcome": 0.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": 100000,
+                "costAbs": 100000
+            }
+        ],
+        "date": 1604188800.000000000,
+        "cost": 100000,
+        "costAbs": 100000,
+        "type": "INCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff79",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 15,
+                    "category": "Maison",
+                    "label": "Divers",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 29.4,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -2940,
+                "costAbs": 2940
+            }
+        ],
+        "date": 1604016000.000000000,
+        "cost": -2940,
+        "costAbs": 2940,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff7a",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 64,
+                    "category": "Bébé",
+                    "label": "Accessoires",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 16.5,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1650,
+                "costAbs": 1650
+            }
+        ],
+        "date": 1604016000.000000000,
+        "cost": -1650,
+        "costAbs": 1650,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff7b",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 65,
+                    "category": "Bébé",
+                    "label": "Vêtements",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 0.99,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -99,
+                "costAbs": 99
+            }
+        ],
+        "date": 1604016000.000000000,
+        "cost": -99,
+        "costAbs": 99,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff7c",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 136.4,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -13640,
+                "costAbs": 13640
+            }
+        ],
+        "date": 1603929600.000000000,
+        "cost": -13640,
+        "costAbs": 13640,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff7d",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 64,
+                    "category": "Bébé",
+                    "label": "Accessoires",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 29.2,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -2920,
+                "costAbs": 2920
+            }
+        ],
+        "date": 1603929600.000000000,
+        "cost": -2920,
+        "costAbs": 2920,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff7e",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 64.06,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -6406,
+                "costAbs": 6406
+            }
+        ],
+        "date": 1603929600.000000000,
+        "cost": -6406,
+        "costAbs": 6406,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff7f",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 15,
+                    "category": "Maison",
+                    "label": "Divers",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 18.99,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1899,
+                "costAbs": 1899
+            }
+        ],
+        "date": 1603929600.000000000,
+        "cost": -1899,
+        "costAbs": 1899,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff80",
+        "description": null,
+        "transactions": [
+            {
+                "category": null,
+                "income": 1200.0,
+                "outcome": 0.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": 120000,
+                "costAbs": 120000
+            }
+        ],
+        "date": 1603929600.000000000,
+        "cost": 120000,
+        "costAbs": 120000,
+        "type": "INCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff81",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 11,
+                    "category": "Autres",
+                    "label": "Divers",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 2.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -200,
+                "costAbs": 200
+            }
+        ],
+        "date": 1603843200.000000000,
+        "cost": -200,
+        "costAbs": 200,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff82",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 15,
+                    "category": "Maison",
+                    "label": "Divers",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 25.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -2500,
+                "costAbs": 2500
+            }
+        ],
+        "date": 1603843200.000000000,
+        "cost": -2500,
+        "costAbs": 2500,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff83",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 19,
+                    "category": "Loisir",
+                    "label": "Ciné",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 11.99,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1199,
+                "costAbs": 1199
+            }
+        ],
+        "date": 1603843200.000000000,
+        "cost": -1199,
+        "costAbs": 1199,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff84",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 64,
+                    "category": "Bébé",
+                    "label": "Accessoires",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 100.83,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -10083,
+                "costAbs": 10083
+            }
+        ],
+        "date": 1603843200.000000000,
+        "cost": -10083,
+        "costAbs": 10083,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfcfa4db742f0c55ff85",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 66,
+                    "category": "Revenu",
+                    "label": "Vir Externe",
+                    "type": null
+                },
+                "income": 200.0,
+                "outcome": 0.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": 20000,
+                "costAbs": 20000
+            }
+        ],
+        "date": 1603756800.000000000,
+        "cost": 20000,
+        "costAbs": 20000,
+        "type": "INCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff86",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 28,
+                    "category": "Impôts & Taxes",
+                    "label": "Taxe d'habitation",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 81.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -8100,
+                "costAbs": 8100
+            }
+        ],
+        "date": 1603670400.000000000,
+        "cost": -8100,
+        "costAbs": 8100,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff87",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 26.3,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -2630,
+                "costAbs": 2630
+            }
+        ],
+        "date": 1603670400.000000000,
+        "cost": -2630,
+        "costAbs": 2630,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff88",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 11.85,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1185,
+                "costAbs": 1185
+            }
+        ],
+        "date": 1603670400.000000000,
+        "cost": -1185,
+        "costAbs": 1185,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff89",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 26,
+                    "category": "Alimentaire",
+                    "label": "Restaurant",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 43.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -4300,
+                "costAbs": 4300
+            }
+        ],
+        "date": 1603584000.000000000,
+        "cost": -4300,
+        "costAbs": 4300,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff8a",
+        "description": null,
+        "transactions": [
+            {
+                "category": null,
+                "income": 120.0,
+                "outcome": 0.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": 12000,
+                "costAbs": 12000
+            }
+        ],
+        "date": 1603670400.000000000,
+        "cost": 12000,
+        "costAbs": 12000,
+        "type": "INCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff8b",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 154.75,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -15475,
+                "costAbs": 15475
+            }
+        ],
+        "date": 1603497600.000000000,
+        "cost": -15475,
+        "costAbs": 15475,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff8c",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 65,
+                    "category": "Bébé",
+                    "label": "Vêtements",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 13.87,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1387,
+                "costAbs": 1387
+            }
+        ],
+        "date": 1603497600.000000000,
+        "cost": -1387,
+        "costAbs": 1387,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff8d",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 76,
+                    "category": "Alimentaire",
+                    "label": "Cantine",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 65.45,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -6545,
+                "costAbs": 6545
+            }
+        ],
+        "date": 1603411200.000000000,
+        "cost": -6545,
+        "costAbs": 6545,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff8e",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 39.45,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -3945,
+                "costAbs": 3945
+            }
+        ],
+        "date": 1603065600.000000000,
+        "cost": -3945,
+        "costAbs": 3945,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff8f",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 164.63,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -16463,
+                "costAbs": 16463
+            }
+        ],
+        "date": 1602892800.000000000,
+        "cost": -16463,
+        "costAbs": 16463,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff90",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 64,
+                    "category": "Bébé",
+                    "label": "Accessoires",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 14.75,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1475,
+                "costAbs": 1475
+            }
+        ],
+        "date": 1602892800.000000000,
+        "cost": -1475,
+        "costAbs": 1475,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff91",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 67,
+                    "category": "Impôts & Taxes",
+                    "label": "Taxe foncière",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 60.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -6000,
+                "costAbs": 6000
+            }
+        ],
+        "date": 1602806400.000000000,
+        "cost": -6000,
+        "costAbs": 6000,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff92",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 28,
+                    "category": "Impôts & Taxes",
+                    "label": "Taxe d'habitation",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 80.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -8000,
+                "costAbs": 8000
+            }
+        ],
+        "date": 1602806400.000000000,
+        "cost": -8000,
+        "costAbs": 8000,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff93",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 42,
+                    "category": "Loisir",
+                    "label": "Sport",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 140.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -14000,
+                "costAbs": 14000
+            }
+        ],
+        "date": 1602806400.000000000,
+        "cost": -14000,
+        "costAbs": 14000,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff94",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 65,
+                    "category": "Bébé",
+                    "label": "Vêtements",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 13.17,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1317,
+                "costAbs": 1317
+            }
+        ],
+        "date": 1602633600.000000000,
+        "cost": -1317,
+        "costAbs": 1317,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff95",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 17,
+                    "category": "Autres",
+                    "label": "Cadeaux",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 92.89,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -9289,
+                "costAbs": 9289
+            }
+        ],
+        "date": 1602460800.000000000,
+        "cost": -9289,
+        "costAbs": 9289,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff96",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 58.85,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -5885,
+                "costAbs": 5885
+            }
+        ],
+        "date": 1602460800.000000000,
+        "cost": -5885,
+        "costAbs": 5885,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff97",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 14,
+                    "category": "Alimentaire",
+                    "label": "Supermarché",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 50.38,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -5038,
+                "costAbs": 5038
+            }
+        ],
+        "date": 1602288000.000000000,
+        "cost": -5038,
+        "costAbs": 5038,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff98",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 39,
+                    "category": "Loisir",
+                    "label": "Musique",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 14.99,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1499,
+                "costAbs": 1499
+            }
+        ],
+        "date": 1602201600.000000000,
+        "cost": -1499,
+        "costAbs": 1499,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff99",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 23,
+                    "category": "Maison",
+                    "label": "Internet",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 41.98,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -4198,
+                "costAbs": 4198
+            }
+        ],
+        "date": 1602115200.000000000,
+        "cost": -4198,
+        "costAbs": 4198,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff9a",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 65,
+                    "category": "Bébé",
+                    "label": "Vêtements",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 39.96,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -3996,
+                "costAbs": 3996
+            }
+        ],
+        "date": 1602115200.000000000,
+        "cost": -3996,
+        "costAbs": 3996,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff9b",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 20,
+                    "category": "Maison",
+                    "label": "Eau",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 85.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -8500,
+                "costAbs": 8500
+            }
+        ],
+        "date": 1602028800.000000000,
+        "cost": -8500,
+        "costAbs": 8500,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff9c",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 21,
+                    "category": "Maison",
+                    "label": "Electricité",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 163.2,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -16320,
+                "costAbs": 16320
+            }
+        ],
+        "date": 1602028800.000000000,
+        "cost": -16320,
+        "costAbs": 16320,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff9d",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 10,
+                    "category": "Autres",
+                    "label": "Banque",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 4.94,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -494,
+                "costAbs": 494
+            }
+        ],
+        "date": 1602028800.000000000,
+        "cost": -494,
+        "costAbs": 494,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff9e",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 13,
+                    "category": "Loisir",
+                    "label": "Jeux d'argent",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 25.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -2500,
+                "costAbs": 2500
+            }
+        ],
+        "date": 1602028800.000000000,
+        "cost": -2500,
+        "costAbs": 2500,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ff9f",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 65,
+                    "category": "Bébé",
+                    "label": "Vêtements",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 6.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -600,
+                "costAbs": 600
+            }
+        ],
+        "date": 1602028800.000000000,
+        "cost": -600,
+        "costAbs": 600,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ffa0",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 17,
+                    "category": "Autres",
+                    "label": "Cadeaux",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 9.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -900,
+                "costAbs": 900
+            }
+        ],
+        "date": 1602028800.000000000,
+        "cost": -900,
+        "costAbs": 900,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ffa1",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 65,
+                    "category": "Bébé",
+                    "label": "Vêtements",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 19.99,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -1999,
+                "costAbs": 1999
+            }
+        ],
+        "date": 1602028800.000000000,
+        "cost": -1999,
+        "costAbs": 1999,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ffa2",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 64,
+                    "category": "Bébé",
+                    "label": "Accessoires",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 57.49,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -5749,
+                "costAbs": 5749
+            }
+        ],
+        "date": 1601942400.000000000,
+        "cost": -5749,
+        "costAbs": 5749,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd0a4db742f0c55ffa3",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 16,
+                    "category": "Maison",
+                    "label": "Assurance",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 27.38,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -2738,
+                "costAbs": 2738
+            }
+        ],
+        "date": 1601856000.000000000,
+        "cost": -2738,
+        "costAbs": 2738,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "5fa3dfd1a4db742f0c55ffa4",
+        "description": null,
+        "transactions": [
+            {
+                "category": {
+                    "id": 11,
+                    "category": "Autres",
+                    "label": "Divers",
+                    "type": null
+                },
+                "income": 0.0,
+                "outcome": 20.24,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -2024,
+                "costAbs": 2024
+            }
+        ],
+        "date": 1601856000.000000000,
+        "cost": -2024,
+        "costAbs": 2024,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "6266be8d32c08e1fbfd21223",
+        "description": "",
+        "transactions": [
+            {
+                "category": {
+                    "id": 80,
+                    "category": "Vacances",
+                    "label": "2022 - Center Park",
+                    "type": "EXTRA"
+                },
+                "income": 0.0,
+                "outcome": 662.08,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -66208,
+                "costAbs": 66208
+            }
+        ],
+        "date": 1642377600.000000000,
+        "cost": -66208,
+        "costAbs": 66208,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "6266bed432c08e1fbfd21224",
+        "description": "",
+        "transactions": [
+            {
+                "category": {
+                    "id": 81,
+                    "category": "Vacances",
+                    "label": "2022 - Sarzeau",
+                    "type": "EXTRA"
+                },
+                "income": 0.0,
+                "outcome": 121.68,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -12168,
+                "costAbs": 12168
+            }
+        ],
+        "date": 1645660800.000000000,
+        "cost": -12168,
+        "costAbs": 12168,
+        "type": "OUTCOME"
+    },
+    {
+        "id": "6266bf2e32c08e1fbfd21225",
+        "description": "",
+        "transactions": [
+            {
+                "category": {
+                    "id": 82,
+                    "category": "Vacances",
+                    "label": "2022 - Arcachon",
+                    "type": "EXTRA"
+                },
+                "income": 0.0,
+                "outcome": 410.0,
+                "description": null,
+                "bankAccount": {
+                    "id": 21,
+                    "category": "Commun",
+                    "label": "CMB"
+                },
+                "cost": -41000,
+                "costAbs": 41000
+            }
+        ],
+        "date": 1648771200.000000000,
+        "cost": -41000,
+        "costAbs": 41000,
+        "type": "OUTCOME"
+    }
+]

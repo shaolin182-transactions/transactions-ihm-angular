@@ -4,7 +4,7 @@ export interface Transaction {
   id : string;
   description?: string;
   transactions: TransactionDetail[]
-  date : string;
+  date : Object;
   cost : number;
   costAbs : number;
   type?: String
