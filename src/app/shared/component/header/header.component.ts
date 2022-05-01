@@ -9,8 +9,6 @@ import { OAuthService } from 'angular-oauth2-oidc';
 export class HeaderComponent implements OnInit {
 
   constructor(private oauthService: OAuthService) {
-    // Automatically load user profile
-
   }
 
   ngOnInit(): void {
@@ -18,8 +16,6 @@ export class HeaderComponent implements OnInit {
 
   private configureCodeFlow() {
     console.log("Configure Code Flow")
-//     this.oauthService.configure(keycloakAuthConfig);
-//     this.oauthService.loadDiscoveryDocumentAndTryLogin();
     this.oauthService.events.subscribe(e => console.log(e));
     this.oauthService.initCodeFlow();
   }
