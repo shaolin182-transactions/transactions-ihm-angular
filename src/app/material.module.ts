@@ -7,6 +7,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; 
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatIconModule,
     MatListModule,
     MatButtonModule, 
-    MatSortModule
+    MatSortModule, 
+    MatProgressSpinnerModule
   ],
   exports: [
     MatTableModule,
@@ -25,7 +27,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatIconModule,
     MatListModule,
     MatButtonModule, 
-    MatSortModule
+    MatSortModule,
+    MatProgressSpinnerModule
  ]
 })
 export class MaterialModule {}
