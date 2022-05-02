@@ -3,6 +3,7 @@ import { TransactionsService } from '../transactions.service';
 import { TransactionItem } from '../models/transaction-item';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { finalize } from 'rxjs';
 
 
 @Component({
@@ -11,6 +12,8 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./transactionslist.component.css']
 })
 export class TransactionslistComponent implements OnInit, AfterViewInit {
+
+  loading = false;
 
   transactions : TransactionItem[] = [];
 
@@ -50,7 +53,9 @@ export class TransactionslistComponent implements OnInit, AfterViewInit {
   }
 
   getTransactions() : void {
+    this.loading = true;
     this.transactionsService.getTransactions()
+      .pipe(finalize(() => this.loading = false))
       .subscribe(transactions => this.dataSource.data = transactions);
   }
 }

@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="!loading">
   <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!-- Id Column -->
@@ -41,6 +41,10 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
+<div *ngIf="loading">
+  <mat-spinner style="margin:0 auto;"></mat-spinner>
+</div>
+
 
 
 
