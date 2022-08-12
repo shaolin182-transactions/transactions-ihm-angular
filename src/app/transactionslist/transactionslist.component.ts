@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TransactionsService } from '../transactions.service';
 import { TransactionItem } from '../models/transaction-item';
 import {MatSort} from '@angular/material/sort';
@@ -11,7 +11,7 @@ import { finalize } from 'rxjs';
   templateUrl: './transactionslist.component.html',
   styleUrls: ['./transactionslist.component.css']
 })
-export class TransactionslistComponent implements OnInit, AfterViewInit {
+export class TransactionslistComponent implements OnInit {
 
   loading = false;
 
@@ -19,10 +19,9 @@ export class TransactionslistComponent implements OnInit, AfterViewInit {
 
   dataSource = new MatTableDataSource(this.transactions);
 
-  @ViewChild(MatSort) sort: MatSort;
 
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
+  @ViewChild(MatSort, {static: false}) set content(sort: MatSort) {
+    this.dataSource.sort = sort;
     this.dataSource.sortingDataAccessor = this.sortingDataAccessor;
   }
 

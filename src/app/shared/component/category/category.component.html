@@ -1,0 +1,14 @@
+<p *ngIf="category && readOnly">{{ category.sortedLabel }}</p>
+
+<mat-form-field appearance="fill" *ngIf="!readOnly">
+    <mat-label>Select a category</mat-label>
+
+    <mat-select>
+        <mat-optgroup *ngFor="let mainCategory of categories.keys()" [label]="mainCategory">
+            <mat-option *ngFor="let subCategory of categories.get(mainCategory)" [value]="subCategory.label">
+                {{subCategory.label}}
+            </mat-option>
+        </mat-optgroup>
+    </mat-select>
+    
+</mat-form-field>

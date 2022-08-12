@@ -10,9 +10,13 @@ import { HomeComponent } from './home/home.component'
 import { SharedModule } from './shared/shared.module'
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import { CostComponent } from './transactionslist/cost/cost.component';
-import { CategoryComponent } from './transactionslist/category/category.component';
+import { CostComponent } from './shared/component/cost/cost.component';
+import { CategoryComponent } from './shared/component/category/category.component';
 import { BankAccountComponent } from './transactionslist/bank-account/bank-account.component';
+import { ImportfileComponent } from './importfile/importfile.component';
+import { DraganddropDirective } from './draganddrop.directive';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 registerLocaleData(localeFr);
 
@@ -24,13 +28,17 @@ registerLocaleData(localeFr);
     HomeComponent,
     CostComponent,
     CategoryComponent,
-    BankAccountComponent
+    BankAccountComponent,
+    ImportfileComponent,
+    DraganddropDirective
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
+    FormsModule,
+    FlexLayoutModule,
     OAuthModule.forRoot({
         resourceServer: {
             allowedUrls: ['http://localhost:8080/transactions'],

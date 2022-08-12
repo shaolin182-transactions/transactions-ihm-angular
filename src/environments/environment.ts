@@ -5,7 +5,8 @@
 export const environment = {
   production: false, 
 
-  transactionsUrl: '/assets/transactions.json'
+  transactionsUrl: '/assets/transactions.json',
+  categoriesUrl: 'assets/categories.json'
 };
 
 /*

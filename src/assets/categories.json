@@ -1,0 +1,39 @@
+[
+    {
+        "id": 10,
+        "category": "Revenu",
+        "label": "Salaire",
+        "type": "COURANTE"
+    },
+    {
+        "id": 1,
+        "category": "Maison",
+        "label": "Loyer/Prêt",
+        "type": "FIXE"
+    },{
+        "id": 66,
+        "category": "Revenu",
+        "label": "Vir Externe",
+        "type": null
+    },{
+        "id": 15,
+        "category": "Maison",
+        "label": "Divers",
+        "type": null
+    },{
+        "id": 64,
+        "category": "Bébé",
+        "label": "Accessoires",
+        "type": null
+    },{
+        "id": 65,
+        "category": "Bébé",
+        "label": "Vêtements",
+        "type": null
+    },{
+        "id": 14,
+        "category": "Alimentaire",
+        "label": "Supermarché",
+        "type": null
+    }
+]
