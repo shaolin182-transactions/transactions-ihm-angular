@@ -35,20 +35,23 @@
         <div>
             <button mat-raised-button color="primary" (click)="parse()">Importer</button>
         </div>
-    </div>
-    <div>
-        <mat-list>
-            <mat-list-item *ngFor="let tr of transactions">
-                <div fxLayout="row" fxLayoutAlign="center" >
-                    <div>
-                        {{tr.date}}
+
+
+        <div>
+            <mat-list>
+                <mat-list-item *ngFor="let tr of transactions">
+                    <div fxLayout="row" fxLayoutAlign="center" >
+                        <div>
+                            {{tr.date}}
+                        </div>
+                        <div>{{tr.description}}</div>
+                        <div><app-category [category]="tr.category" [readOnly]="true"></app-category></div>
+                        <div><app-cost [cost]="tr.cost"></app-cost></div>
+                        
                     </div>
-                    <div>{{tr.description}}</div>
-                    <div><app-category [category]="tr.category" [readOnly]="false"></app-category></div>
-                    <div><app-cost [cost]="tr.cost"></app-cost></div>
-                    
-                </div>
-            </mat-list-item>
-        </mat-list>
+                </mat-list-item>
+            </mat-list>
+        </div>
     </div>
+    
 </div>

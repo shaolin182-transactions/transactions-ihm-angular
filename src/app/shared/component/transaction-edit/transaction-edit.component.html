@@ -1,0 +1,66 @@
+<mat-card *ngIf="isOpen">
+    <mat-card-header>
+        <mat-card-title>Edit transaction</mat-card-title>
+        <div fxFlex></div>
+        <!--<button mat-button class="close-icon">-->
+            <mat-icon (click)="closeFn()">close</mat-icon>
+        <!--</button>-->
+    </mat-card-header>
+    <mat-card-content>
+        <form #form="ngForm" fxLayout="column">
+            <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="transaction.date" name="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <input matInput placeholder="Description" [(ngModel)]="transaction.description" name="description">
+            </mat-form-field>
+    
+            <!-- BankAccount-->
+            <mat-form-field appearance="fill" >
+                <mat-label>Select a Bank Account</mat-label>
+            
+                <mat-select [(ngModel)]="transaction.bankAccount" name="bankAccount" [compareWith]="compareBankAccount">
+                    <mat-optgroup *ngFor="let mainBk of bankAccounts.keys()" [label]="mainBk">
+                        <mat-option *ngFor="let subBk of bankAccounts.get(mainBk)" [value]="subBk">
+                            {{subBk.label}}
+                        </mat-option>
+                    </mat-optgroup>
+                </mat-select>
+                
+            </mat-form-field>
+    
+            <!-- Category-->
+            <mat-form-field appearance="fill" >
+                <mat-label>Select a category</mat-label>
+            
+                <mat-select [(ngModel)]="transaction.category" name="category" [compareWith]="compareCategory">
+                    <mat-optgroup *ngFor="let mainCategory of categories.keys()" [label]="mainCategory">
+                        <mat-option *ngFor="let subCategory of categories.get(mainCategory)" [value]="subCategory">
+                            {{subCategory.label}}
+                        </mat-option>
+                    </mat-optgroup>
+                </mat-select>
+                
+            </mat-form-field>
+    
+            <!-- Cost -->
+            <mat-form-field appearance="fill">
+                <mat-label>Cost</mat-label>
+                <input matInput placeholder="Cost" [(ngModel)]="transaction.cost" name="cost">
+            </mat-form-field>
+    
+    
+            <button mat-button mat-raised-button color="primary" (click)="saveOrEdit()">Save</button>
+        </form>
+
+        {{ transaction | json }}
+
+        {{ bankAccounts | json  }}
+    </mat-card-content>
+    
+</mat-card>

@@ -8,7 +8,7 @@ import { TransactionCategory } from "./transaction-category"
 export interface TransactionItem {
 
     original: Transaction
-    date: string
+    date: Date
     cost: number
     description: string
     category: TransactionCategory

@@ -5,7 +5,7 @@
         "transactions": [
             {
                 "category": {
-                    "id": 10,
+                    "id": 46,
                     "category": "Revenu",
                     "label": "Salaire",
                     "type": "COURANTE"
@@ -14,7 +14,7 @@
                 "outcome": 0.0,
                 "description": "Salaire",
                 "bankAccount": {
-                    "id": 1,
+                    "id": 26,
                     "category": "Perso",
                     "label": "ING Direct"
                 },
@@ -33,7 +33,7 @@
         "transactions": [
             {
                 "category": {
-                    "id": 1,
+                    "id": 24,
                     "category": "Maison",
                     "label": "Loyer/Prêt",
                     "type": "FIXE"
@@ -42,7 +42,7 @@
                 "outcome": 1276.87,
                 "description": "Loyer",
                 "bankAccount": {
-                    "id": 12,
+                    "id": 21,
                     "category": "Commun",
                     "label": "CMB"
                 },

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { OAuthService  } from 'angular-oauth2-oidc';
 import { keycloakAuthConfig } from './auth.keycloak.config'
 import { MatSidenav } from '@angular/material/sidenav';
-import { SidenavService } from './sidenav.service';
+import { SidenavService } from './services/sidenav.service';
 
 @Component({
   selector: 'app-root',

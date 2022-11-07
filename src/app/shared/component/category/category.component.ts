@@ -1,5 +1,5 @@
 import { Component, Input, OnInit} from '@angular/core';
-import { CategoryService } from 'src/app/category.service';
+import { CategoryService } from 'src/app/services/category.service';
 import { TransactionCategory } from 'src/app/models/transaction-category';
 
 @Component({
@@ -17,19 +17,19 @@ export class CategoryComponent implements OnInit {
     if (this.category){
       this.category.sortedLabel = this.category?.category + " > " + this.category?.label
     }
-    this.getCategories();
+    // this.getCategories();
   }
 
-  getCategories() {
+  /* getCategories() {
     this.categoryService.getCategories()
       .subscribe(categories => this.categories = this.transformCategories(categories));
-  }
+  } */
 
   /**
    * Transform categories in an correft format for select datasource
    * @param categories : Categories from server
    */
-   transformCategories(categories : TransactionCategory[]) : Map<String, TransactionCategory[]> {
+   /* transformCategories(categories : TransactionCategory[]) : Map<String, TransactionCategory[]> {
     
     let result:Map<String, TransactionCategory[]> = new Map<String, TransactionCategory[]>();
 
@@ -42,7 +42,7 @@ export class CategoryComponent implements OnInit {
       }
     }    
     return result
-  }
+  } */
 
   @Input() category:TransactionCategory;
 

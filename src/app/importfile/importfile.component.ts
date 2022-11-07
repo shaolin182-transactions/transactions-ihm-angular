@@ -1,11 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { finalize } from 'rxjs';
-import { CategoryService } from '../category.service';
-import { ImportService } from '../import.service';
-import { IngParsingServiceService } from '../ing-parsing-service.service';
-import { Transaction } from '../models/transaction';
-import { TransactionCategory } from '../models/transaction-category';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { IngParsingServiceService } from '../services/ing-parsing-service.service';
 import { TransactionItem } from '../models/transaction-item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-importfile',
@@ -20,7 +16,7 @@ export class ImportfileComponent {
   transactions : TransactionItem[] = [];
   headers = false;
 
-  constructor(private ingParsingService : IngParsingServiceService) { }
+  constructor(private ingParsingService : IngParsingServiceService, private route:Router) { }
 
 
   /**
@@ -72,8 +68,10 @@ export class ImportfileComponent {
   }
 
   parse() {
-    this.ingParsingService.parse(this.files[0])
-    .subscribe(transactions => this.transactions.push(transactions));
+    this.ingParsingService.file = this.files[0];
+    this.route.navigate(['/import-result'])
+    // this.ingParsingService.parse()
+    // .subscribe(transactions => this.transactions.push(transactions));
     
   }
 

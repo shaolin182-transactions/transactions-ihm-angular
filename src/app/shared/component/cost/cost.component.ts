@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class CostComponent{
 
-  @Input() cost;
+  @Input() cost = 0;
 
 }
