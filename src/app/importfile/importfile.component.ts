@@ -14,6 +14,7 @@ export class ImportfileComponent {
   files: any[] = [];
   
   transactions : TransactionItem[] = [];
+  accountType:String;
   headers = false;
 
   constructor(private ingParsingService : IngParsingServiceService, private route:Router) { }
@@ -69,6 +70,7 @@ export class ImportfileComponent {
 
   parse() {
     this.ingParsingService.file = this.files[0];
+    this.ingParsingService.accountType = this.accountType,
     this.route.navigate(['/import-result'])
     // this.ingParsingService.parse()
     // .subscribe(transactions => this.transactions.push(transactions));

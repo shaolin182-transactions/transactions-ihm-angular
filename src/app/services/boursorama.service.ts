@@ -4,7 +4,7 @@ import { BankAccount } from '../models/bank-account';
 import { TransactionItem } from '../models/transaction-item';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BoursoramaService {
 
