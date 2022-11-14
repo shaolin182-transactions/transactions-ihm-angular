@@ -9,6 +9,7 @@ import { TransactionCategory } from '../models/transaction-category';
 import { TransactionItem } from '../models/transaction-item';
 
 import { environment } from '../../environments/environment';
+import { TransactionDetail } from '../models/transaction-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,8 @@ export class TransactionsService {
   }
 
   addTransaction(transaction:TransactionItem) : Observable<TransactionItem> {
-    return this.http.post<Transaction>(environment.transactionsUrl, {transaction})
+    let tr = this.mapTransactionItem(transaction);
+    return this.http.post<Transaction>(environment.transactionsUrl, {tr})
       .pipe(
         map(data => this.mapTransaction(data))
       );
@@ -33,7 +35,8 @@ export class TransactionsService {
 
   putTransaction(transaction:TransactionItem) : Observable<TransactionItem> {
     const id = transaction.original.id;
-    return this.http.put<Transaction>(environment.transactionsUrl + "/" + id, transaction, {})
+    let tr = this.mapTransactionItem(transaction);
+    return this.http.put<Transaction>(environment.transactionsUrl + "/" + id, tr, {})
       .pipe(
         catchError(this.handleError),
         map(data => this.mapTransaction(data))
@@ -70,6 +73,23 @@ export class TransactionsService {
         } as TransactionItem;
 
   }
+
+  mapTransactionItem(item: TransactionItem) : Transaction {
+    let transactionDetail:TransactionDetail = {} as TransactionDetail;
+    transactionDetail.bankAccount = item.bankAccount;
+    transactionDetail.category = item.category;
+    item.cost > 0 ? transactionDetail.income = item.cost : 0;
+    item.cost < 0 ? transactionDetail.outcome = item.cost : 0;
+    transactionDetail.description = item.description;
+
+    return {
+      date : new Date(Number(item.date) * 1000),
+      cost: item.cost,
+      description : item.description,
+      transactions: [transactionDetail]
+    } as Transaction;
+
+}
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

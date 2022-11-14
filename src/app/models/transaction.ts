@@ -1,12 +1,12 @@
 import { TransactionDetail } from "./transaction-detail"
 
 export interface Transaction {
-  id : string;
+  id? : string;
   description?: string;
   transactions: TransactionDetail[]
   date : Object;
   cost : number;
-  costAbs : number;
+  costAbs? : number;
   type?: String
 
 }
