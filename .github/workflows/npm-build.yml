@@ -1,4 +1,4 @@
-name: NodeJS with Grunt
+name: Build transactions-ihm-angular
 
 on:
   push:
@@ -21,7 +21,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Build
+    - name: Install Dependencies
       run: |
         npm install
-        grunt
+
+    - name: Lint
+      run: ng lint
+
+    - name: Build
+      run: ng build
