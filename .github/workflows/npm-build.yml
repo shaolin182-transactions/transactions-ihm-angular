@@ -25,6 +25,8 @@ jobs:
       run: |
         npm install
 
+    - run: npm install -g @angular/cli > /dev/null
+
     - name: Lint
       run: ng lint
 
