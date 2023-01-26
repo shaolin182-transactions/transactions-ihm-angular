@@ -5,7 +5,10 @@
 export const environment = {
   production: false, 
 
-  transactionsUrl: '/assets/transactions.json'
+  transactionsUrl: 'http://localhost:8080/transactions',
+  transactionsUrlGet: '/assets/transactions.json',
+  categoriesUrl: 'assets/categories.json',
+  bankAccountUrl: 'assets/bankAccount.json'
 };
 
 /*

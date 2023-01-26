@@ -1,18 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
+import { SidenavService } from 'src/app/services/sidenav.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor(private oauthService: OAuthService) {
+  toggleActive:boolean = false;
+
+  constructor(private oauthService: OAuthService, private sidenav: SidenavService) {
   }
 
-  ngOnInit(): void {
-  }
+  toggleRightSidenav() {
+		this.toggleActive = !this.toggleActive;
+		this.sidenav.toggle();
+
+	}
 
   private configureCodeFlow() {
     console.log("Configure Code Flow")

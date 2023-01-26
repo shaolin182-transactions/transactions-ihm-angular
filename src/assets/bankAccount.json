@@ -1,0 +1,87 @@
+[
+    {
+        "id" : 10,
+        "category" : "PEE",
+        "label" : "PEG Sopra"
+    },
+    {
+        "id" : 13,
+        "category" : "PEE",
+        "label" : "PEE Sopra"
+    },
+    {
+        "id" : 21,
+        "category" : "Commun",
+        "label" : "CMB"
+    },
+    {
+        "id" : 22,
+        "category" : "Perso",
+        "label" : "CMB"
+    },
+    {
+        "id" : 23,
+        "category" : "Perso",
+        "label" : "Crédit Mutuel"
+    },
+    {
+        "id" : 24,
+        "category" : "Perso",
+        "label" : "Fortuneo"
+    },
+    {
+        "id" : 25,
+        "category" : "Commun",
+        "label" : "Fortuneo"
+    },
+    {
+        "id" : 26,
+        "category" : "Perso",
+        "label" : "ING Direct"
+    },
+    {
+        "id" : 27,
+        "category" : "Epargne",
+        "label" : "LDD"
+    },
+    {
+        "id" : 28,
+        "category" : "Perso",
+        "label" : "Espèces"
+    },
+    {
+        "id" : 29,
+        "category" : "Epargne",
+        "label" : "Livret A"
+    },
+    {
+        "id" : 30,
+        "category" : "Perso",
+        "label" : "Ticket Restaurant"
+    },
+    {
+        "id" : 31,
+        "category" : "Epargne",
+        "label" : "PEL"
+    },
+    {
+        "id" : 32,
+        "category" : "Commun",
+        "label" : "Espèces"
+    },
+    {
+        "id" : 35,
+        "category" : "PEE",
+        "label" : "PER"
+    },
+    {
+        "id" : 36,
+        "category" : "PEE",
+        "label" : "PEG Capgemini"
+    },
+    {
+        "id" : 37,
+        "category" : "Perso",
+        "label" : "Boursorama"
+    }
+]

@@ -5,3 +5,7 @@ table {
 div {
     padding: 1%;
 }
+
+.is-selected {
+    font-weight: bold;
+}

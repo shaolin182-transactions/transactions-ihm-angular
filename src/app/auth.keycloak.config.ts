@@ -4,7 +4,7 @@ import { AuthConfig } from 'angular-oauth2-oidc';
 
 export const keycloakAuthConfig: AuthConfig = {
   // Url of the Identity Provider
-  issuer: 'http://localhost:8082/auth/realms/transactions/',
+  issuer: 'http://keycloak:8082/auth/realms/transactions/',
 
   // URL of the SPA to redirect the user to after login
   redirectUri: 'http://localhost:4200/home',

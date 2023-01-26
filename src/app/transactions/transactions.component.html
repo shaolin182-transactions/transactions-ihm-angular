@@ -1,0 +1,7 @@
+<div *ngIf="!loading">
+  <app-transactions-list [transactions]="transactions"></app-transactions-list>
+</div>
+
+<div *ngIf="loading">
+  <mat-spinner style="margin:0 auto;"></mat-spinner>
+</div>
