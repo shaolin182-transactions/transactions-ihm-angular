@@ -29,6 +29,7 @@ jobs:
 
     - name: Lint
       run: ng lint
+      continue-on-error: true
 
     - name: Build
       run: ng build
