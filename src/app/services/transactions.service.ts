@@ -27,7 +27,7 @@ export class TransactionsService {
 
   addTransaction(transaction:TransactionItem) : Observable<TransactionItem> {
     let tr = this.mapTransactionItem(transaction);
-    return this.http.post<Transaction>(environment.transactionsUrl, {tr})
+    return this.http.post<Transaction>(environment.transactionsUrl, tr)
       .pipe(
         map(data => this.mapTransaction(data))
       );
@@ -76,18 +76,37 @@ export class TransactionsService {
 
   mapTransactionItem(item: TransactionItem) : Transaction {
     let transactionDetail:TransactionDetail = {} as TransactionDetail;
-    transactionDetail.bankAccount = item.bankAccount;
-    transactionDetail.category = item.category;
-    item.cost > 0 ? transactionDetail.income = item.cost : 0;
-    item.cost < 0 ? transactionDetail.outcome = item.cost : 0;
+    transactionDetail.bankAccount = {} as BankAccount;
+    if ( transactionDetail.bankAccount != undefined){
+      transactionDetail.bankAccount.id = item.bankAccount.id;
+//      delete transactionDetail.bankAccount['sortedLabel'];
+    }
+    
+
+    
+    if (item.category != undefined) {
+      transactionDetail.category = {} as TransactionCategory;
+      transactionDetail.category.id = item.category.id;
+      // delete transactionDetail.category['sortedLabel'];
+    }
+
+    transactionDetail.income = item.cost > 0 ? Math.abs(item.cost / 100) :  0; 
+    transactionDetail.outcome = item.cost < 0 ?  Math.abs(item.cost / 100) : 0;
+
     transactionDetail.description = item.description;
 
-    return {
-      date : new Date(Number(item.date) * 1000),
+    let transaction: Transaction = {
+      date : new Date(Number(item.date)),
       cost: item.cost,
       description : item.description,
       transactions: [transactionDetail]
     } as Transaction;
+
+    if (item.original) {
+      transaction.id = item.original.id;
+    }
+
+    return transaction;
 
 }
 

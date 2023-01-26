@@ -78,5 +78,10 @@
         "id" : 36,
         "category" : "PEE",
         "label" : "PEG Capgemini"
+    },
+    {
+        "id" : 37,
+        "category" : "Perso",
+        "label" : "Boursorama"
     }
 ]

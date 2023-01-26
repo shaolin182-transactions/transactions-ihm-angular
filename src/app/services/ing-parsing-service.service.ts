@@ -55,7 +55,6 @@ export class IngParsingServiceService {
 
 
   getContentLines(fileContent: String) : String[] {
-    console.log(fileContent);
     return fileContent.split(/\r?\n/);
   }
 
@@ -99,8 +98,8 @@ export class IngParsingServiceService {
       return {
         original: null,
         date : date,
-        cost: Number(fields[5]?.replace(',', '.')) * 100,
-        description : fields[2],
+        cost: Number(fields[5]?.replace(/,/g, '.').replace(/"/g, '').replace(/ /g, '')) * 100,
+        description : fields[2]?.replace(/"/g, '').replace(/\*/g, ''),
         bankAccount: bk,
         category: null
       } as TransactionItem;
@@ -116,14 +115,14 @@ export class IngParsingServiceService {
       const [day, month, year] = fields[0]?.replace(/"/g, '').split('/');
       const date = new Date(+year, +month - 1, +day)
 
-      const income = Number(fields[4]?.replace(/"/g, ''));
-      const outcome = Number(fields[3]?.replace(/"/g, ''));
+      const income = Number(fields[4]?.replace(/"/g, '').replace(',', '.'));
+      const outcome = Number(fields[3]?.replace(/"/g, '').replace(',', '.'));
 
       return {
         original: null,
         date : date,
         cost: (income - outcome) * 100,
-        description : fields[2]?.replace(/"/g, ''),
+        description : fields[2]?.replace(/"/g, '').replace(/\*/g, ''),
         bankAccount: bk,
         category: null
       } as TransactionItem;
