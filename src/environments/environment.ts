@@ -7,6 +7,7 @@ export const environment = {
 
   transactionsUrl: 'http://localhost:8080/transactions',
   transactionsUrlGet: '/assets/transactions.json',
+  keyCloakUrl: 'http://localhost:8080',
   categoriesUrl: 'assets/categories.json',
   bankAccountUrl: 'assets/bankAccount.json'
 };
