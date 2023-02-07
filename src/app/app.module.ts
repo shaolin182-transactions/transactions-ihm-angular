@@ -14,6 +14,7 @@ import { DraganddropDirective } from './draganddrop.directive';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ImportResultComponent } from './import-result/import-result.component';
+import { environment } from '../environments/environment';
 
 registerLocaleData(localeFr);
 
@@ -36,7 +37,7 @@ registerLocaleData(localeFr);
     FlexLayoutModule,
     OAuthModule.forRoot({
         resourceServer: {
-            allowedUrls: ['http://localhost:8080/transactions'],
+            allowedUrls: [environment.transactionsUrl],
             sendAccessToken: true
         }
     })
