@@ -6,8 +6,9 @@ export const environment = {
   production: false, 
 
   transactionsUrl: 'http://localhost:8080/transactions',
-  transactionsUrlGet: '/assets/transactions.json',
+  transactionsUrlGet: 'http://localhost:8080/transactions',
   keyCloakUrl: 'http://localhost:8080',
+  discoveryUrl: 'http://keycloak:8082/auth/realms/transactions/.well-known/openid-configuration',
   categoriesUrl: 'assets/categories.json',
   bankAccountUrl: 'assets/bankAccount.json'
 };

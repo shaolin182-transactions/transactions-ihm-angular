@@ -9,7 +9,7 @@ export const keycloakAuthConfig: AuthConfig = {
   issuer: environment.keyCloakUrl,
 
   // URL of the SPA to redirect the user to after login
-  redirectUri: 'http://localhost:4200/home',
+  redirectUri: 'http://localhost:4200/',
 
   useSilentRefresh: false,
 
