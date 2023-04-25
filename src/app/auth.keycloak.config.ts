@@ -1,7 +1,7 @@
 // This api will come in the next version
 
 import { AuthConfig } from 'angular-oauth2-oidc';
-import { environment } from '../environments/environment';
+import { environment } from '../assets/environments/environment';
 
 
 export const keycloakAuthConfig: AuthConfig = {

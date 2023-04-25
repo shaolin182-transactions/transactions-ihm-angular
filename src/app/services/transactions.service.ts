@@ -8,7 +8,7 @@ import { BankAccount } from '../models/bank-account';
 import { TransactionCategory } from '../models/transaction-category';
 import { TransactionItem } from '../models/transaction-item';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../assets/environments/environment';
 import { TransactionDetail } from '../models/transaction-detail';
 
 @Injectable({

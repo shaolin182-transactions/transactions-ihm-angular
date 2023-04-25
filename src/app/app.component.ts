@@ -3,7 +3,7 @@ import { OAuthService  } from 'angular-oauth2-oidc';
 import { keycloakAuthConfig } from './auth.keycloak.config'
 import { MatSidenav } from '@angular/material/sidenav';
 import { SidenavService } from './services/sidenav.service';
-import { environment } from '../environments/environment';
+import { environment } from '../assets/environments/environment';
 
 @Component({
   selector: 'app-root',
