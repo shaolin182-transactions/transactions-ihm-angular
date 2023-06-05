@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -8,18 +8,18 @@ import { BankAccount } from '../models/bank-account';
 import { TransactionCategory } from '../models/transaction-category';
 import { TransactionItem } from '../models/transaction-item';
 
-import { environment } from '../../assets/environments/environment';
 import { TransactionDetail } from '../models/transaction-detail';
+import { APP_CONFIG, AppConfig } from '../models/app-config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransactionsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, @Inject(APP_CONFIG) public config: AppConfig) { }
 
   getTransactions() : Observable<TransactionItem[]> {
-    return this.http.get<Transaction[]>(environment.transactionsUrlGet)
+    return this.http.get<Transaction[]>(this.config.transactionsUrlGet)
       .pipe(
         map(data => this.mapTransactions(data))
       );
@@ -27,7 +27,7 @@ export class TransactionsService {
 
   addTransaction(transaction:TransactionItem) : Observable<TransactionItem> {
     let tr = this.mapTransactionItem(transaction);
-    return this.http.post<Transaction>(environment.transactionsUrl, tr)
+    return this.http.post<Transaction>(this.config.transactionsUrl, tr)
       .pipe(
         map(data => this.mapTransaction(data))
       );
@@ -36,7 +36,7 @@ export class TransactionsService {
   putTransaction(transaction:TransactionItem) : Observable<TransactionItem> {
     const id = transaction.original.id;
     let tr = this.mapTransactionItem(transaction);
-    return this.http.put<Transaction>(environment.transactionsUrl + "/" + id, tr, {})
+    return this.http.put<Transaction>(this.config.transactionsUrl + "/" + id, tr, {})
       .pipe(
         catchError(this.handleError),
         map(data => this.mapTransaction(data))
@@ -44,7 +44,7 @@ export class TransactionsService {
   }
 
   patchTransactions() : Observable<TransactionItem[]> {
-    return this.http.get<Transaction[]>(environment.transactionsUrl)
+    return this.http.get<Transaction[]>(this.config.transactionsUrl)
       .pipe(
         map(data => this.mapTransactions(data))
       );
