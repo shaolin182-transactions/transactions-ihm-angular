@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, Inject, ViewChild } from '@angular/core';
 import { AuthConfig, OAuthService  } from 'angular-oauth2-oidc';
-import { keycloakAuthConfig } from './auth.keycloak.config'
 import { MatSidenav } from '@angular/material/sidenav';
 import { SidenavService } from './services/sidenav.service';
 import { APP_CONFIG, AppConfig } from './models/app-config';
