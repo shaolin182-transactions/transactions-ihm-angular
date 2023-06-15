@@ -5,5 +5,6 @@
   "keyCloakUrl": "http://localhost:8080",
   "discoveryUrl": "http://keycloak:8082/auth/realms/transactions/.well-known/openid-configuration",
   "categoriesUrl": "assets/categories.json",
-  "bankAccountUrl": "assets/bankAccount.json"
+  "bankAccountUrl": "assets/bankAccount.json",
+  "redirectUri": "http://localhost:4200"
 }

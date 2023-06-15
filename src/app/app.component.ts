@@ -26,7 +26,7 @@ export class AppComponent implements AfterViewInit {
       issuer: this.config.keyCloakUrl,
     
       // URL of the SPA to redirect the user to after login
-      redirectUri: 'http://localhost:4200/',
+      redirectUri: this.config.redirectUri,
     
       useSilentRefresh: false,
     

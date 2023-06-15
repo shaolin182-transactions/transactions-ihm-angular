@@ -9,6 +9,7 @@ export class AppConfig {
   discoveryUrl: string;
   categoriesUrl: string;
   bankAccountUrl: string;
+  redirectUri: string;
 }
 
 export let APP_CONFIG = new InjectionToken<AppConfig>('APP_CONFIG')
