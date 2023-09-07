@@ -1,0 +1,44 @@
+name: Build transactions-ihm-angular
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install Dependencies
+      run: |
+        npm install
+
+    - run: npm install -g @angular/cli@^13.0.0 > /dev/null
+
+    - name: Build
+      run: ng build -c production
+
+    - name: Login to DockerHub Registry
+      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+    - name: Create docker image tag name with github release name
+      id: vars
+      run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
+    - name: Build image
+      run: docker build . --file Dockerfile --tag jugirard/transactions-ihm-angular:${{steps.vars.outputs.tag}} --tag jugirard/transactions-ihm-angular:latest
+    - name: Push Docker Image
+      run: docker push jugirard/transactions-ihm-angular:${{steps.vars.outputs.tag}}
+    - name: Push Docker Image latest tag
+      run: docker push jugirard/transactions-ihm-angular:latest
+    - name: Docker logout
+      run: docker logout

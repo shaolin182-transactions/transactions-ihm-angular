@@ -1,18 +1,19 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { TransactionCategory } from '../models/transaction-category';
+import { AppConfigService } from './app-config.service';
+import { APP_CONFIG, AppConfig } from '../models/app-config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, @Inject(APP_CONFIG) public config: AppConfig) { }
 
   getCategories() : Observable<TransactionCategory[]> {
-    return this.http.get<TransactionCategory[]>(environment.categoriesUrl)
+    return this.http.get<TransactionCategory[]>(this.config.categoriesUrl)
     .pipe(
       map(data => this.mapCategories(data))
     );
