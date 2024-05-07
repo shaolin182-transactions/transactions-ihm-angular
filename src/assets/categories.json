@@ -421,5 +421,29 @@
 		"category" : "Vacances",
 		"label" : "2022 - Arcachon",
 		"type" : "EXTRA"
-	}
+	},
+  {
+    "id" : 83,
+    "category" : "Vacances",
+    "label" : "2023 - Bretagne",
+    "type" : "EXTRA"
+  },
+  {
+    "id" : 84,
+    "category" : "Vacances",
+    "label" : "2023 - Dordogne",
+    "type" : "EXTRA"
+  },
+  {
+    "id" : 85,
+    "category" : "Vacances",
+    "label" : "2024 - Vendée",
+    "type" : "EXTRA"
+  },
+  {
+    "id" : 86,
+    "category" : "Vacances",
+    "label" : "2024 - Auvergne",
+    "type" : "EXTRA"
+  }
 ]
