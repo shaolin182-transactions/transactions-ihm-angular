@@ -5,6 +5,7 @@ import { TransactionItem } from '../../../models/transaction-item';
 import { TransactionsService } from '../../../services/transactions.service';
 import { BankAccountService } from 'src/app/services/bank-account.service';
 import { BankAccount } from '../../../models/bank-account';
+import { AlertifyService } from 'src/app/services/alertify.service';
 
 @Component({
   selector: 'app-transaction-edit',
@@ -15,14 +16,15 @@ export class TransactionEditComponent implements OnInit, AfterViewInit {
 
   @Input() transaction:TransactionItem;
 
-  @Input() 
+  @Input()
   isOpen: Boolean;
-  
+
   categories: Map<String, TransactionCategory[]>;
 
   bankAccounts: Map<String, BankAccount[]>;
 
-  constructor(private categoryService : CategoryService, private transactionService: TransactionsService, private bankAccountService : BankAccountService){}
+  constructor(private categoryService : CategoryService, private transactionService: TransactionsService, private bankAccountService : BankAccountService, private alertifyService: AlertifyService){}
+
   ngAfterViewInit(): void {
     this.getCategories();
     this.getBankAccounts();
@@ -49,17 +51,17 @@ export class TransactionEditComponent implements OnInit, AfterViewInit {
    * @param bankAccounts : Bank Accounts from server
    */
    transformBankAccount(bankAccounts : BankAccount[]) : Map<String, BankAccount[]> {
-    
+
     let result:Map<String, BankAccount[]> = new Map<String, BankAccount[]>();
 
     for (let bankAccount of bankAccounts){
       let mainCategory = bankAccount.category;
       if (result.has(mainCategory)){
-        result.get(mainCategory).push(bankAccount)  
+        result.get(mainCategory).push(bankAccount)
       } else {
         result.set(mainCategory, [bankAccount]);
       }
-    }    
+    }
     return result
   }
 
@@ -68,17 +70,17 @@ export class TransactionEditComponent implements OnInit, AfterViewInit {
    * @param categories : Categories from server
    */
    transformCategories(categories : TransactionCategory[]) : Map<String, TransactionCategory[]> {
-    
+
     let result:Map<String, TransactionCategory[]> = new Map<String, TransactionCategory[]>();
 
     for (let category of categories){
       let mainCategory = category.category;
       if (result.has(mainCategory)){
-        result.get(mainCategory).push(category)  
+        result.get(mainCategory).push(category)
       } else {
         result.set(mainCategory, [category]);
       }
-    }    
+    }
     return result
   }
 
@@ -107,11 +109,15 @@ export class TransactionEditComponent implements OnInit, AfterViewInit {
   saveOrEdit() {
     console.log("addorEdit")
     if (this.transaction.original){
-      this.transactionService.putTransaction(this.transaction).subscribe(transaction => this.transaction = transaction);
+      this.transactionService.putTransaction(this.transaction)
+        .subscribe(
+          transaction => this.transaction = transaction,
+          error => this.alertifyService.error(`Error when updating transactions : ${error.message}`));
     } else {
-      this.transactionService.addTransaction(this.transaction).subscribe(transaction => this.transaction = transaction);
+      this.transactionService.addTransaction(this.transaction)
+        .subscribe(
+          transaction => this.transaction = transaction,
+          error => this.alertifyService.error(`Error when saving transactions : ${error.message}`));
     }
-    
   }
-
 }

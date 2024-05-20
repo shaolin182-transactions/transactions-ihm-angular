@@ -38,7 +38,6 @@ export class TransactionsService {
     let tr = this.mapTransactionItem(transaction);
     return this.http.put<Transaction>(this.config.transactionsUrl + "/" + id, tr, {})
       .pipe(
-        catchError(this.handleError),
         map(data => this.mapTransaction(data))
       );
   }
@@ -81,16 +80,14 @@ export class TransactionsService {
       transactionDetail.bankAccount.id = item.bankAccount.id;
 //      delete transactionDetail.bankAccount['sortedLabel'];
     }
-    
 
-    
     if (item.category != undefined) {
       transactionDetail.category = {} as TransactionCategory;
       transactionDetail.category.id = item.category.id;
       // delete transactionDetail.category['sortedLabel'];
     }
 
-    transactionDetail.income = item.cost > 0 ? Math.abs(item.cost / 100) :  0; 
+    transactionDetail.income = item.cost > 0 ? Math.abs(item.cost / 100) :  0;
     transactionDetail.outcome = item.cost < 0 ?  Math.abs(item.cost / 100) : 0;
 
     transactionDetail.description = item.description;
