@@ -4,6 +4,7 @@ import { TransactionItem } from '../models/transaction-item';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { finalize } from 'rxjs';
+import { AlertifyService } from '../services/alertify.service';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class TransactionsComponent implements OnInit, AfterViewInit {
   transactions : TransactionItem[] = [];
 
 
-  constructor(private transactionsService : TransactionsService) { }
+  constructor(private transactionsService : TransactionsService, private alertifyService: AlertifyService) { }
   ngAfterViewInit(): void {
     this.getTransactions();
   }
@@ -32,8 +33,9 @@ export class TransactionsComponent implements OnInit, AfterViewInit {
     this.loading = true;
     this.transactionsService.getTransactions()
       .pipe(finalize(() => this.loading = false))
-      .subscribe(transactions => {
-        this.transactions = transactions;
-        console.log("toto");});
+      .subscribe(
+        transactions => this.transactions = transactions,
+        error => this.alertifyService.error(`Error when getting transactions : ${error.message}`)
+      );
   }
 }
