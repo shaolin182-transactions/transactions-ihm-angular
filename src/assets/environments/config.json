@@ -1,7 +1,7 @@
 {
   "production": false,
   "transactionsUrl": "http://localhost:8080/transactions",
-  "transactionsUrlGet": "http://localhost:8080/transactions",
+  "transactionsUrlGet": "assets/data/transactions.json",
   "keyCloakUrl": "http://localhost:8080",
   "discoveryUrl": "http://keycloak:8082/auth/realms/transactions/.well-known/openid-configuration",
   "categoriesUrl": "assets/data/categories.json",
