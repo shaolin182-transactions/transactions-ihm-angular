@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Transaction } from '../models/transaction';
@@ -8,8 +7,6 @@ import { Transaction } from '../models/transaction';
 })
 export class ImportService {
 
-  
-  constructor(private http: HttpClient) { }
 
   importTransactionsFile(filename: String, file: File) : Observable<Transaction[]> {
     console.log("Call Import service")
@@ -24,6 +21,5 @@ export class ImportService {
     }
     fileReader.readAsText(file);
     return null;
-    // return this.http.post<Transaction[]>(environment.transactionsUrl, file);
   }
 }

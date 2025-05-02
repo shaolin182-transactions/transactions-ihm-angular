@@ -72,8 +72,6 @@ export class ImportfileComponent {
     this.ingParsingService.file = this.files[0];
     this.ingParsingService.accountType = this.accountType,
     this.route.navigate(['/import-result'])
-    // this.ingParsingService.parse()
-    // .subscribe(transactions => this.transactions.push(transactions));
     
   }
 

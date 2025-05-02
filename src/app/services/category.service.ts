@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { TransactionCategory } from '../models/transaction-category';
-import { AppConfigService } from './app-config.service';
 import { APP_CONFIG, AppConfig } from '../models/app-config';
 
 @Injectable({

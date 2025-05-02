@@ -16,6 +16,8 @@ export class ImportResultComponent implements OnInit, AfterViewInit {
   loading = false;
 
   constructor(private ingParsingService : IngParsingServiceService) { }
+
+  // TODO : Delete reference to INGParsingService it should be any instance of a parsing service
   ngAfterViewInit(): void {
     console.log("After view INit import -resut");
     this.loading = true;

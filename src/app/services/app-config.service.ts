@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { AppConfig } from '../models/app-config';
 import { HttpClient } from '@angular/common/http';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
+@Injectable({
+  providedIn: 'root',
+})
 export class AppConfigService {
 
   private readonly CONFIG_URL = 'assets/environments/environment.json';

@@ -17,17 +17,17 @@ export class HomeComponent implements OnInit {
   }
 
   get userName(): string {
-      const claims = this.oauthService.getIdentityClaims();
-      if (!claims) return null;
-      return claims['given_name'];
-    }
+    const claims = this.oauthService.getIdentityClaims();
+    if (!claims) return null;
+    return claims['given_name'];
+  }
 
-    get idToken(): string {
-      return this.oauthService.getIdToken();
-    }
+  get idToken(): string {
+    return this.oauthService.getIdToken();
+  }
 
-    get accessToken(): string {
-      return this.oauthService.getAccessToken();
-    }
+  get accessToken(): string {
+    return this.oauthService.getAccessToken();
+  }
 
 }

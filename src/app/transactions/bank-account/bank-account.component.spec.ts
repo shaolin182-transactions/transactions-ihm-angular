@@ -16,6 +16,12 @@ describe('BankAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BankAccountComponent);
     component = fixture.componentInstance;
+    // Init data for allow component to be created
+    component.bankAccount = {
+      id: 1,
+      label: 'Account',
+      category: 'Category'
+    };  
     fixture.detectChanges();
   });
 
