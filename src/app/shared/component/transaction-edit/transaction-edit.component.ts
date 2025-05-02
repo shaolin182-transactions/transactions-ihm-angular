@@ -23,7 +23,7 @@ export class TransactionEditComponent implements OnInit, AfterViewInit {
 
   bankAccounts: Map<String, BankAccount[]>;
 
-  constructor(private categoryService : CategoryService, private transactionService: TransactionsService, private bankAccountService : BankAccountService, private alertifyService: AlertifyService){}
+  constructor(public categoryService : CategoryService, public transactionService: TransactionsService, public bankAccountService : BankAccountService, public alertifyService: AlertifyService){}
 
   ngAfterViewInit(): void {
     this.getCategories();

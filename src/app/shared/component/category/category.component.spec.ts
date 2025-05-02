@@ -16,10 +16,19 @@ describe('CategoryComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CategoryComponent);
     component = fixture.componentInstance;
+
+    // Init data for allow component to be created
+    component.category = {
+      id: 1,
+      label: 'Category',
+      category: 'Main Category'
+    };
+    
     fixture.detectChanges();
   });
 
   it('should create', () => {
+    
     expect(component).toBeTruthy();
   });
 });

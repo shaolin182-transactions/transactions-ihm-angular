@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ImportfileComponent } from './importfile.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ImportfileComponent', () => {
   let component: ImportfileComponent;
@@ -8,7 +9,10 @@ describe('ImportfileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImportfileComponent ]
+      declarations: [ ImportfileComponent ],
+      imports: [
+        RouterTestingModule.withRoutes([])
+      ]
     })
     .compileComponents();
   });
