@@ -22,7 +22,6 @@ describe('TransactionsService', () => {
       ]
     });
     service = TestBed.inject(TransactionsService);
-    httpMock = TestBed.inject(HttpTestingController);
   });
 
   it('should be created', () => {

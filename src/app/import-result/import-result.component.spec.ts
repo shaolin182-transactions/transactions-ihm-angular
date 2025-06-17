@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ImportResultComponent } from './import-result.component';
-import { IngParsingServiceService } from '../services/ing-parsing-service.service';
 import { TransactionItem } from '../models/transaction-item';
 import { of } from 'rxjs';
+import { ParseFileService } from '../services/parse-account-file/parse-file';
 
 describe('ImportResultComponent', () => {
   let component: ImportResultComponent;
   let fixture: ComponentFixture<ImportResultComponent>;
-  let mockIngParsingService: jasmine.SpyObj<IngParsingServiceService>;
+  let mockParsingService: jasmine.SpyObj<ParseFileService>;
 
   beforeEach(async () => {
     // Créer un mock pour OAuthService
-    mockIngParsingService = jasmine.createSpyObj('IngParsingServiceService', [
+    mockParsingService = jasmine.createSpyObj('ParseFileService', [
       'parse'
     ]);
 
@@ -30,12 +30,12 @@ describe('ImportResultComponent', () => {
       },
       category: null,
     };
-    mockIngParsingService.parse.and.returnValue(of(mockTransaction));
+    mockParsingService.parse.and.returnValue(of(mockTransaction));
 
     await TestBed.configureTestingModule({
       declarations: [ ImportResultComponent ],
       providers: [{
-        provide: IngParsingServiceService, useValue: mockIngParsingService
+        provide: ParseFileService, useValue: mockParsingService
       }]
     })
     .compileComponents();

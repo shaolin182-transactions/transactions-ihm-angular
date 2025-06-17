@@ -1,8 +1,10 @@
-import { getLocaleFirstDayOfWeek } from '@angular/common';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs';
 import { TransactionItem } from '../models/transaction-item';
-import { IngParsingServiceService } from '../services/ing-parsing-service.service';
+import { ParseFileService } from '../services/parse-account-file/parse-file';
+import { IParseAccountLineService } from '../services/parse-account-file/i-parse-account-line';
+import { BoursoramaLineParserService } from '../services/parse-account-file/boursorama.service';
+import { CmbLineParserService } from '../services/parse-account-file/cmb.service';
 
 @Component({
   selector: 'app-import-result',
@@ -15,13 +17,11 @@ export class ImportResultComponent implements OnInit, AfterViewInit {
 
   loading = false;
 
-  constructor(private ingParsingService : IngParsingServiceService) { }
+  constructor(private readonly parseFileService : ParseFileService, private readonly boursoramaLineParser : BoursoramaLineParserService, private readonly cmbLineParserService : CmbLineParserService) { }
 
-  // TODO : Delete reference to INGParsingService it should be any instance of a parsing service
   ngAfterViewInit(): void {
-    console.log("After view INit import -resut");
     this.loading = true;
-    this.ingParsingService.parse()
+    this.parseFileService.parse(this.determineLineParser())
       .pipe(finalize(() => this.loading = false))
       .subscribe(transaction =>  {
         this.transactions.push(transaction);
@@ -30,11 +30,19 @@ export class ImportResultComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.loading = true;
-    this.ingParsingService.parse()
+    this.parseFileService.parse(this.determineLineParser())
       .pipe(finalize(() => this.loading = false))
       .subscribe(transaction =>  {
         this.transactions.push(transaction);
       });
+  }
+
+  determineLineParser(): IParseAccountLineService {
+    if (this.parseFileService.accountType === "BOURSORAMA") {
+      return this.boursoramaLineParser;
+    } else {
+      return this.cmbLineParserService;
+    }
   }
 
 }

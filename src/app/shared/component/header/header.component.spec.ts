@@ -14,7 +14,6 @@ describe('HeaderComponent', () => {
     mockSideNavService = jasmine.createSpyObj('SidenavService', [
       'toggle',
     ]);
-    mockSideNavService.toggle.and.callFake;
 
     // Créer un mock pour OAuthService
     mockOAuthService = jasmine.createSpyObj('OAuthService', [
