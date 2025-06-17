@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { IngParsingServiceService } from '../services/ing-parsing-service.service';
 import { TransactionItem } from '../models/transaction-item';
 import { Router } from '@angular/router';
+import { ParseFileService } from '../services/parse-account-file/parse-file';
 
 @Component({
   selector: 'app-importfile',
@@ -14,10 +14,10 @@ export class ImportfileComponent {
   files: any[] = [];
   
   transactions : TransactionItem[] = [];
-  accountType:String;
+  accountType:string;
   headers = false;
 
-  constructor(private ingParsingService : IngParsingServiceService, private route:Router) { }
+  constructor(private readonly parseFileService : ParseFileService, private readonly route:Router) { }
 
 
   /**
@@ -68,11 +68,13 @@ export class ImportfileComponent {
     this.files.splice(index, 1);
   }
 
+  /**
+   * Parse account file
+   */
   parse() {
-    this.ingParsingService.file = this.files[0];
-    this.ingParsingService.accountType = this.accountType,
+    this.parseFileService.file = this.files[0];
+    this.parseFileService.accountType = this.accountType;
     this.route.navigate(['/import-result'])
-    
   }
 
 

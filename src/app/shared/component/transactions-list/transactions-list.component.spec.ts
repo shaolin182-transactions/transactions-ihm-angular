@@ -5,7 +5,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditFormService } from 'src/app/services/edit-form.service';
-import { of } from 'rxjs';
 import { Component } from '@angular/core';
 import { TransactionEditComponent } from '../transaction-edit/transaction-edit.component';
 
@@ -15,8 +14,7 @@ import { TransactionEditComponent } from '../transaction-edit/transaction-edit.c
   template: ''
 })
 class MockTransactionEditComponent {
-  openFn() {}
-  closeFn() {}
+
 }
 
 describe('TransactionsListComponent', () => {

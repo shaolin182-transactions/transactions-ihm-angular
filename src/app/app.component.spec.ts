@@ -22,9 +22,7 @@ describe('AppComponent', () => {
     ]);
 
     // Configurer les valeurs retournées par les méthodes mockées
-    mockOAuthService.configure.and.callFake;
     mockOAuthService.loadDiscoveryDocument.and.returnValue(Promise.resolve({ type: 'discovery_document_loaded' , info: {}}));
-    mockOAuthService.tryLogin.and.callFake;
     
     await TestBed.configureTestingModule({
       imports: [

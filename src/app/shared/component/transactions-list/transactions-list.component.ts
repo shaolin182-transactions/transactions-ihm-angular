@@ -12,6 +12,7 @@ import { TransactionEditComponent } from 'src/app/shared/component/transaction-e
 })
 export class TransactionsListComponent implements OnInit, AfterViewInit {
 
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('transactions')
   private _transactions: TransactionItem[] = [];
 
